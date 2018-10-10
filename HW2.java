@@ -78,9 +78,9 @@ class Deck{
 		//cards.add(card);
 		//Sample code end
 		
-		for(int d=1;d<=nDeck;d++) { //how many decks
-		for(int i=1;i<=4;i++) {  //four suits
-			for(int j=1;j<=13;j++) {  //Ace to K 13 ranks
+		for(int d=1;d<=nDeck;d++) { //總共有多少副牌
+		for(int i=1;i<=4;i++) {  //4種花色
+			for(int j=1;j<=13;j++) {  //Ace to K 13種牌
 		Card cardcard=new Card(i,j);
 		cards.add(cardcard);
 		}
@@ -94,7 +94,7 @@ class Deck{
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
 		
-		for(int c=0;c < cards.size();c++) { //cards ArrayList the 0th to the last
+		for(int c=0;c < cards.size();c++) { //cards ArrayList 的第0位到最後1位
 		
 			Card cardcard= cards.get(c);
 			cardcard.printCard(); //use printCard() print (suit,rank)
@@ -123,7 +123,7 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-		System.out.println(getSuit()+","+getRank()); //use getSuit(), getRank() to get the value of suit and rank
+		System.out.println(getSuit()+","+getRank()); //getSuit(), getRank() 來取得suit rank的值
 		
 	}
 	public int getSuit(){
