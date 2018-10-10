@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * @author TODO: please add student ID and name here
+ * @author TODO: B0444220 Áé®a¸R
  * Try to write some comments for your codes (methods, 15 points)
  */
 public class HW2 {
@@ -21,13 +21,13 @@ public class HW2 {
 		if(isAllCardsCorrect(deck.getAllCards(),nDeck)){
 			System.out.println("Well done!");
 		}else{
-			System.out.println("Error, please check your sourse code");
+			System.out.println("Error, please check your source code");
 		}
 	}
 	/**
 	 * This method is used for checking your result, not a part of your HW2
-	 * @param allCards æ‰€æœ‰çš„ç‰Œ
-	 * @param nDeck ç¸½å…±æœ‰å¹¾å‰¯ç‰Œ
+	 * @param allCards ©Ò¦³ªºµP
+	 * @param nDeck Á`¦@¦³´X°ÆµP
 	 * @return
 	 */
 	private static boolean isAllCardsCorrect(ArrayList<Card> allCards,int nDeck){
@@ -64,7 +64,7 @@ public class HW2 {
 
 }
 /**
- * Description: TODO: please add description here
+ * Description: TODO: «ö·Ó¿é¤Jªº¦h¤Ö°ÆµP¡A¨Ó·s¼W¥|ºØªá¦âªº¼³§JµP¡A¨Ã¥Bprint¥X¨Ó
  */
 class Deck{
 	private ArrayList<Card> cards;
@@ -77,12 +77,29 @@ class Deck{
 		//Card card=new Card(1,1); ->means new card as clubs ace
 		//cards.add(card);
 		//Sample code end
-
+		
+		for(int d=1;d<=nDeck;d++) { //how many decks
+		for(int i=1;i<=4;i++) {  //four suits
+			for(int j=1;j<=13;j++) {  //Ace to K 13 ranks
+		Card cardcard=new Card(i,j);
+		cards.add(cardcard);
+		}
+		}
+		}
+		
 	}	
 	//TODO: Please implement the method to print all cards on screen (10 points)
+	         
 	public void printDeck(){
 		//Hint: print all items in ArrayList<Card> cards, 
 		//TODO: please implement and reuse printCard method in Card class (5 points)
+		
+		for(int c=0;c < cards.size();c++) { //cards ArrayList the 0th to the last
+		
+			Card cardcard= cards.get(c);
+			cardcard.printCard(); //use printCard() print (suit,rank)
+		}
+		
 
 	}
 	public ArrayList<Card> getAllCards(){
@@ -90,7 +107,7 @@ class Deck{
 	}
 }
 /**
- * Description: TODO: please add description here
+ * Description: TODO: ©w¸qsuit¸òrank¬°ªá¦â©M¼Æ¦r¡A¨Ã¥B©w¸q printCard, getSuit, getRank() ¤TºØmethod
  */
 class Card{
 	private int suit; //Definition: 1~4, Clubs=1, Diamonds=2, Hearts=3, Spades=4
@@ -106,7 +123,8 @@ class Card{
 	//TODO: 1. Please implement the printCard method (20 points, 10 for suit, 10 for rank)
 	public void printCard(){
 		//Hint: print (System.out.println) card as suit,rank, for example: print 1,1 as Clubs Ace
-
+		System.out.println(getSuit()+","+getRank()); //use getSuit(), getRank() to get the value of suit and rank
+		
 	}
 	public int getSuit(){
 		return suit;
